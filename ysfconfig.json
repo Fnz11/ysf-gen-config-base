@@ -1,0 +1,152 @@
+{
+    "entities": {
+        "users": {
+            "fields": [
+                {
+                    "name": "user_id",
+                    "type": "String",
+                    "isId": true,
+                    "isRelation": false,
+                    "isRequired": true,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "username",
+                    "type": "String",
+                    "isId": false,
+                    "isRelation": false,
+                    "isRequired": true,
+                    "isUnique": true,
+                    "isList": false
+                },
+                {
+                    "name": "role",
+                    "type": "Role",
+                    "isId": false,
+                    "isRelation": false,
+                    "isRequired": true,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "created_at",
+                    "type": "DateTime",
+                    "isId": false,
+                    "isRelation": false,
+                    "isRequired": true,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "email",
+                    "type": "String",
+                    "isId": false,
+                    "isRelation": false,
+                    "isRequired": true,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "email_verify",
+                    "type": "email_verifies",
+                    "isId": false,
+                    "isRelation": true,
+                    "isRequired": false,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "user_detail",
+                    "type": "user_details",
+                    "isId": false,
+                    "isRelation": true,
+                    "isRequired": false,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "user_preference",
+                    "type": "user_preferences",
+                    "isId": false,
+                    "isRelation": true,
+                    "isRequired": false,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "local_user",
+                    "type": "local_users",
+                    "isId": false,
+                    "isRelation": true,
+                    "isRequired": false,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "oauth_user",
+                    "type": "oauth_users",
+                    "isId": false,
+                    "isRelation": true,
+                    "isRequired": false,
+                    "isUnique": false,
+                    "isList": false
+                },
+                {
+                    "name": "posts",
+                    "type": "posts",
+                    "isId": false,
+                    "isRelation": true,
+                    "isRequired": true,
+                    "isUnique": false,
+                    "isList": true
+                }
+            ], 
+            "relations": [
+                {
+                    "name": "email_verify",
+                    "type": "email_verifies",
+                    "relationName": "email_verifiesTousers",
+                    "relationToFields": [],
+                    "relationFromFields": []
+                },
+                {
+                    "name": "user_detail",
+                    "type": "user_details",
+                    "relationName": "user_detailsTousers",
+                    "relationToFields": [],
+                    "relationFromFields": []
+                },
+                {
+                    "name": "user_preference",
+                    "type": "user_preferences",
+                    "relationName": "user_preferencesTousers",
+                    "relationToFields": [],
+                    "relationFromFields": []
+                },
+                {
+                    "name": "local_user",
+                    "type": "local_users",
+                    "relationName": "local_usersTousers",
+                    "relationToFields": [],
+                    "relationFromFields": []
+                },
+                {
+                    "name": "oauth_user",
+                    "type": "oauth_users",
+                    "relationName": "oauth_usersTousers",
+                    "relationToFields": [],
+                    "relationFromFields": []
+                },
+                {
+                    "name": "posts",
+                    "type": "posts",
+                    "relationName": "postsTousers",
+                    "relationToFields": [],
+                    "relationFromFields": []
+                }
+            ],
+            "searchField": "username"
+        }
+    }
+}
